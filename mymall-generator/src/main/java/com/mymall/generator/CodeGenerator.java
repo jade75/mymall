@@ -79,7 +79,7 @@ public class CodeGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         //模块名称
-        //pc.setModuleName(scanner("模块名"));
+        pc.setModuleName(scanner("模块名"));
         //父包
         pc.setParent("com.mymall.test");
         //自定义实体包名(不同的模块自己手动修改)
@@ -133,14 +133,14 @@ public class CodeGenerator {
         String controllerTemplate = templatePath + "controller.java";
         String serviceTemplate = templatePath + "service.java";
         String serviceImplTemplate = templatePath + "serviceImpl.java";
-//        String mapperTemplate = templatePath + "mapper.java";
+        String mapperTemplate = templatePath + "mapper.java";
 
         TemplateConfig templateConfig = new TemplateConfig();
         templateConfig.setXml(null);
 //        templateConfig.setController("/templates/controller.java.vm");
         templateConfig.setService(serviceTemplate);
         templateConfig.setServiceImpl(serviceImplTemplate);
-//        templateConfig.setMapper(mapperTemplate);
+        templateConfig.setMapper(mapperTemplate);
         templateConfig.setController(controllerTemplate);
 
 

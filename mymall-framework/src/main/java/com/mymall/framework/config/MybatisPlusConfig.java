@@ -8,9 +8,9 @@ import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerIntercept
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//@Configuration
+@Configuration
 public class MybatisPlusConfig {
-//    @Bean
+    @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor mybatisPlusInterceptor = new MybatisPlusInterceptor();
         // 数据权限
@@ -25,4 +25,8 @@ public class MybatisPlusConfig {
         return mybatisPlusInterceptor;
     }
 
+//    @Bean
+//    public FieldMetaObjectHandler fieldMetaObjectHandler(){
+//        return new FieldMetaObjectHandler();
+//    }
 }
