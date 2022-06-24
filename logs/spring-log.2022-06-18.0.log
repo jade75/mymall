@@ -1,0 +1,84 @@
+14:47:23.858 [main] INFO  com.mymall.ServerApplication - Starting ServerApplication using Java 1.8.0_311 on YudeMacBook-Pro.local with PID 5758 (/Users/yuchen/Downloads/mymall/mymall-admin/target/classes started by yuchen in /Users/yuchen/Downloads/mymall)
+14:47:23.862 [main] INFO  com.mymall.ServerApplication - No active profile set, falling back to 1 default profile: "default"
+14:47:24.786 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+14:47:24.795 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:47:24.796 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:47:24.796 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+14:47:24.925 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:47:24.925 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 992 ms
+14:47:25.254 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:47:25.281 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+14:47:25.292 [main] INFO  com.mymall.ServerApplication - Started ServerApplication in 1.945 seconds (JVM running for 2.583)
+14:47:27.439 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:47:27.439 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:47:27.441 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:47:27.469 [http-nio-8080-exec-1] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:47:45.772 [http-nio-8080-exec-2] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:51:49.701 [main] INFO  com.mymall.ServerApplication - Starting ServerApplication using Java 1.8.0_311 on YudeMacBook-Pro.local with PID 5818 (/Users/yuchen/Downloads/mymall/mymall-admin/target/classes started by yuchen in /Users/yuchen/Downloads/mymall)
+14:51:49.706 [main] INFO  com.mymall.ServerApplication - No active profile set, falling back to 1 default profile: "default"
+14:51:50.771 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+14:51:50.783 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:51:50.784 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:51:50.784 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+14:51:50.955 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:51:50.956 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1162 ms
+14:51:51.303 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:51:51.333 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+14:51:51.344 [main] INFO  com.mymall.ServerApplication - Started ServerApplication in 2.306 seconds (JVM running for 3.188)
+14:51:55.964 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:51:55.965 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:51:55.966 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:51:55.990 [http-nio-8080-exec-1] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:51:58.272 [http-nio-8080-exec-2] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:52:54.716 [main] INFO  com.mymall.ServerApplication - Starting ServerApplication using Java 1.8.0_311 on YudeMacBook-Pro.local with PID 5837 (/Users/yuchen/Downloads/mymall/mymall-admin/target/classes started by yuchen in /Users/yuchen/Downloads/mymall)
+14:52:54.719 [main] INFO  com.mymall.ServerApplication - No active profile set, falling back to 1 default profile: "default"
+14:52:55.785 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+14:52:55.801 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:52:55.802 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:52:55.803 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+14:52:55.994 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:52:55.994 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1208 ms
+14:52:56.434 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:52:56.475 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+14:52:56.486 [main] INFO  com.mymall.ServerApplication - Started ServerApplication in 2.245 seconds (JVM running for 2.884)
+14:52:57.887 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:52:57.887 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:52:57.888 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:52:57.910 [http-nio-8080-exec-2] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:52:59.383 [http-nio-8080-exec-1] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:53:01.763 [http-nio-8080-exec-3] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:54:07.011 [main] INFO  com.mymall.ServerApplication - Starting ServerApplication using Java 1.8.0_311 on YudeMacBook-Pro.local with PID 5859 (/Users/yuchen/Downloads/mymall/mymall-admin/target/classes started by yuchen in /Users/yuchen/Downloads/mymall)
+14:54:07.014 [main] INFO  com.mymall.ServerApplication - No active profile set, falling back to 1 default profile: "default"
+14:54:08.137 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+14:54:08.157 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:54:08.159 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:54:08.159 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+14:54:08.385 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:54:08.386 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1311 ms
+14:54:08.791 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:54:08.832 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+14:54:08.843 [main] INFO  com.mymall.ServerApplication - Started ServerApplication in 2.326 seconds (JVM running for 2.947)
+14:54:09.659 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:54:09.659 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:54:09.660 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:54:09.685 [http-nio-8080-exec-1] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:54:10.322 [http-nio-8080-exec-2] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:54:10.818 [http-nio-8080-exec-3] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:54:11.153 [http-nio-8080-exec-4] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:54:11.365 [http-nio-8080-exec-5] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:55:42.048 [main] INFO  com.mymall.ServerApplication - Starting ServerApplication using Java 1.8.0_311 on YudeMacBook-Pro.local with PID 5885 (/Users/yuchen/Downloads/mymall/mymall-admin/target/classes started by yuchen in /Users/yuchen/Downloads/mymall)
+14:55:42.052 [main] INFO  com.mymall.ServerApplication - No active profile set, falling back to 1 default profile: "default"
+14:55:43.057 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+14:55:43.066 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:55:43.067 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:55:43.067 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+14:55:43.199 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:55:43.200 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1087 ms
+14:55:43.549 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:55:43.589 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+14:55:43.600 [main] INFO  com.mymall.ServerApplication - Started ServerApplication in 2.048 seconds (JVM running for 2.664)
+14:55:47.709 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:55:47.709 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:55:47.710 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:55:47.734 [http-nio-8080-exec-1] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man
+14:55:58.718 [http-nio-8080-exec-2] ERROR c.m.f.e.GlobalExceptionHandler - 自定义异常：----------------fucker man

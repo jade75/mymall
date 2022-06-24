@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mymall-framework" />
+        <module name="mymall-generator" />
+        <module name="mymall-admin" />
+        <module name="mymall-test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mymall" target="1.8" />
+      <module name="mymall-admin" target="1.8" />
+      <module name="mymall-framework" target="1.8" />
+      <module name="mymall-generator" target="1.8" />
+      <module name="mymall-test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mymall" options="" />
+      <module name="mymall-admin" options="-parameters" />
+      <module name="mymall-framework" options="-parameters" />
+      <module name="mymall-generator" options="-parameters" />
+      <module name="mymall-test" options="-parameters" />
+    </option>
+  </component>
+</project>
