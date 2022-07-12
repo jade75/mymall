@@ -1,10 +1,8 @@
 package com.mymall.test.sys.service;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mymall.framework.utils.PageUtils;
 import com.mymall.test.sys.entity.SysUser;
-import com.baomidou.mybatisplus.extension.service.IService;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 import java.util.Map;
 
@@ -17,6 +15,9 @@ import java.util.Map;
 * @since 2022-06-23
 */
 public interface SysUserService {
+
+    SysUser findByUsername(String username);
+
 
     PageUtils queryPageSql(String username, String city);
 

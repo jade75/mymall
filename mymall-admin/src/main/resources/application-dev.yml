@@ -31,8 +31,8 @@ spring:
 token:
   secret: f4e2e52034348f86b67cde581c0f9eb5
   header: Authorization
-  expireTime: 60000
-  refreshExpireTime: 120000
+  expireTime: 3600000
+  refreshExpireTime: 12000000
 
 
 #mybatis

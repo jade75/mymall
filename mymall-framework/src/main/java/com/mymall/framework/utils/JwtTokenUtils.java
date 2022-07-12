@@ -3,12 +3,11 @@ package com.mymall.framework.utils;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.request.RequestAttributes;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
@@ -18,6 +17,7 @@ import java.util.Map;
 //@ConfigurationProperties(prefix = "token")
 @Slf4j
 @Component
+@Data
 public class JwtTokenUtils {
 
     @Value("${token.secret}")
@@ -116,21 +116,32 @@ public class JwtTokenUtils {
             return null;
         }
     }
-    
-    public String getUsernameFromToken(HttpServletRequest request){
+
+    public String getUsernameFromToken(HttpServletRequest request) {
         try {
 //            RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
 //            HttpServletRequest request = ((ServletRequestAttributes) requestAttributes).getRequest();
 
             String header = request.getHeader(this.header);
-            return getUsernameFromToken(header);
-        }catch (Exception e){
+            if (StringUtils.isNotEmpty(header)) {
+                return getUsernameFromToken(header);
+            }else{
+                return null;
+            }
+        } catch (Exception e) {
             log.error(e.getMessage());
             return null;
         }
     }
-}
 
+
+
+//    public static void main(String[] args) throws InterruptedException {
+//        JwtTokenUtils jwtTokenUtils = new JwtTokenUtils();
+//        String admin = jwtTokenUtils.generateToken("admin");
+//    }
+
+}
 
 
 

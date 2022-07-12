@@ -6,11 +6,14 @@ import com.mymall.framework.utils.RedisUtils;
 import com.mymall.framework.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
+
+    @PreAuthorize("hasAuthority('fuck')")
     @GetMapping("/t2")
     public Result t() {
 //        int i = 1 / 0;
@@ -23,6 +26,7 @@ public class TestController {
     @Autowired
     private JwtTokenUtils jwtTokenUtils;
 
+    @PreAuthorize("hasAuthority('sys:user:list')")
     @GetMapping("/token")
     public Result token() {
         String token = jwtTokenUtils.generateToken("test");

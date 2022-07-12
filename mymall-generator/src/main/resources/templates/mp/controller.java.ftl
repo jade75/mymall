@@ -2,8 +2,8 @@ package ${package.Controller};
 
 import com.mymall.framework.utils.Result;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import ${package.Entity}.dto.ResultBean;
+<#--import org.springframework.beans.factory.annotation.Autowired;-->
+<#--import ${package.Entity}.dto.ResultBean;-->
 import ${package.Service}.${table.serviceName};
 import ${package.Entity}.${entity};
 <#if restControllerStyle>

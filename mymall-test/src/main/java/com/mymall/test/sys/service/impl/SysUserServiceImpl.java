@@ -12,7 +12,6 @@ import com.mymall.test.sys.mapper.SysUserMapper;
 import com.mymall.test.sys.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,6 +30,18 @@ import java.util.Map;
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> implements SysUserService {
 
 
+
+
+    @Override
+    public SysUser findByUsername(String username) {
+
+        return getOne(new QueryWrapper<SysUser>().eq("username", username));
+//        return  baseMapper.selectOne(new QueryWrapper<SysUser>().eq("username", username));
+    }
+
+
+
+    //分页3 -sql
     @Override
     public PageUtils queryPageSql(String username, String city) {
 
@@ -41,6 +52,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 
 
 
+    //分页1
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
         String username = (String) params.get("username");
@@ -63,6 +75,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         return new PageUtils(page);
     }
 
+    //分页2
     @Override
     public Page<SysUser> listSysUsersByPage(int page, int pageSize, String factor) {
         log.info("正在执行分页查询sysUser: page = {} pageSize = {} factor = {}", page, pageSize, factor);

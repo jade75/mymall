@@ -62,8 +62,13 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.8.0" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.6" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.7.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.20" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:5.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:5.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:5.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.7" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.7.0" level="project" />
