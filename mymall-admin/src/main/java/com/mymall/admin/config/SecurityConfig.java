@@ -21,7 +21,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 public class SecurityConfig {
 
-
     @Autowired
     UserDetailServiceImpl userDetailService;
 
@@ -34,148 +33,66 @@ public class SecurityConfig {
     @Autowired
     LoginSuccessHandler loginSuccessHandler;
 
+    @Autowired
+    LoginFailureHandler loginFailureHandler;
 
     @Autowired
     private JwtAuthenticationTokenFilter authenticationTokenFilter;
 
-
-/*
-
-    //example for new security way, using bean
-    @Bean
-    public InMemoryUserDetailsManager userDetailsService() {
-        UserDetails user = User.withDefaultPasswordEncoder()
-                .username("admin")
-                .password("admin")
-                .roles("USER")
-                .build();
-        return new InMemoryUserDetailsManager(user);
-    }
-
-
-*/
-
     private static final String[] URL_WHITELIST = {
-
             "/login",
             "/logout",
             "/captcha",
             "/favicon.ico",
             "/test"
-
     };
-//
-//    @Bean
-//    WebSecurityCustomizer webSecurityCustomizer() {
-//        return new WebSecurityCustomizer() {
-//            @Override
-//            public void customize(WebSecurity web) {
-//                web.ignoring().antMatchers("/hello");
-//            }
-//        };
-//    }
+    public static final String[] URL_WHITELIST1 = URL_WHITELIST;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-//    @Bean
-//    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-//        http.cors().and().csrf().disable();
-//                .formLogin()
-//
-//                .and()
-//                .logout()
-//
-//                .and()
-//                .sessionManagement()
-//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//
-//                // 配置拦截规则
-//                .and()
-//                .authorizeRequests()
-//                .antMatchers(URL_WHITELIST).permitAll()
-//                .anyRequest().authenticated();
-//
-//
-//        return http.build();
-//    }
-
     @Bean
     SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
 
         httpSecurity
                 .csrf().disable()
+                //login form by default that requires  "/login",
+                // but this handler will be returned from customized Exception which success or failure
                 .formLogin()
                 .successHandler(loginSuccessHandler)
+                .failureHandler(loginFailureHandler)
 
-
+                //disable sessionManagement
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 
+                // allowed to access by white list and prohibit others
                 .and()
                 .authorizeRequests()
-                .antMatchers(URL_WHITELIST).permitAll()
+                .antMatchers(URL_WHITELIST1).permitAll()
                 .anyRequest().authenticated()
 
                 .and()
                 .exceptionHandling()
+
+                //Universal authentication exception handling
                 .authenticationEntryPoint(unauthorizedHandler)
+                //this exception handler will be call when authority authentication(Permission) is false
                 .accessDeniedHandler(jwtAccessDeniedHandler)
 
 
                 .and()
                 .addFilterBefore(authenticationTokenFilter, UsernamePasswordAuthenticationFilter.class)
         ;
-
-
         return httpSecurity.build();
-//
-
-//        return httpSecurity
-//                // 禁用 CSRF
-//                .csrf().disable()
-////                .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)
-//                // 授权异常
-////                .exceptionHandling()
-////                .authenticationEntryPoint(authenticationErrorHandler)
-////                .accessDeniedHandler(jwtAccessDeniedHandler)
-//
-//                // 防止iframe 造成跨域
-////                .and()
-//                .headers()
-//                .frameOptions()
-//                .disable()
-//
-//                // 不创建会话
-//                .and()
-//                .sessionManagement()
-//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//
-//                .and()
-//                .authorizeRequests()
-//                // 静态资源等等
-//                .antMatchers(
-//                        HttpMethod.GET,
-//                        "/*.html",
-//                        "/**/*.html",
-//                        "/**/*.css",
-//                        "/**/*.js",
-//                        "/webSocket/**"
-//                ).permitAll()
-//
-//                // 所有请求都需要认证
-//                .anyRequest().authenticated()
-//                .and().build();
-//
     }
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
-
 
 }

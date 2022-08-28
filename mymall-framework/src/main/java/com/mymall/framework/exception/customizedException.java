@@ -2,10 +2,9 @@ package com.mymall.framework.exception;
 
 public final class customizedException extends RuntimeException {
     private static final long serialVersionUID = 1L;
-
     private Integer code=500;
-    private String msg;
 
+    private String msg;
 
     public customizedException(String msg) {
         super(msg);

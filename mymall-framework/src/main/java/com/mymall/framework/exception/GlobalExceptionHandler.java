@@ -1,9 +1,9 @@
 package com.mymall.framework.exception;
-
-
 import com.mymall.framework.utils.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -24,7 +24,7 @@ public class GlobalExceptionHandler {
     //    @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(NoHandlerFoundException.class)
     public Result handlerNoFoundException(Exception e) {
-        log.error("路径不存在：----------------{}", e.getMessage(), e);
+        log.error("NoHandlerFoundException：----------------{}", e.getMessage(), e);
         return Result.error(404, "路径不存在，请检查路径是否正确");
     }
 
@@ -35,10 +35,11 @@ public class GlobalExceptionHandler {
         return Result.error("数据库中已存在该记录");
     }
 
-    //    @ResponseStatus(HttpStatus.BAD_REQUEST)
-//    @ResponseBody
     @ExceptionHandler(RuntimeException.class)
     public Result handleException(RuntimeException e) {
+        if (e instanceof AccessDeniedException || e instanceof AuthenticationException){
+            throw e;
+        }
         log.error("未知异常：----------------{}", e.getMessage(), e);
         return Result.error();
     }
@@ -49,7 +50,6 @@ public class GlobalExceptionHandler {
         return Result.error();
     }
 
-    //    @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     public Result handler(MethodArgumentNotValidException e) {
         BindingResult result = e.getBindingResult();
